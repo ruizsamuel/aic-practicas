@@ -1,0 +1,4 @@
+Ciclo: 13, Señal: IFstall; Instrucción ecall
+Ciclo: 14, Señal: IFstall; Instrucción ecall
+Ciclo: 15, Señal: IFstall; Instrucción ecall
+Ciclo: 16, Señal: IFstall; Instrucción ecall
