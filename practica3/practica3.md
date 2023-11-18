@@ -175,7 +175,7 @@ $ ./resultados/riscv_ej2a -j -d c -c s3 -f codigo/datos1.s
 
 ![Ejercicio 2a](./resultados/ej_2a.png)
 
-__b) Riesgo de datos por carga__
+__b) Riesgo de datos por carga__  
 En este caso, además de activar el cortocircuito correspondiente, se debe insertar un ciclo de parada en la etapa de decodificación (fichero _datos2.s_).
 
 ⇒ Dibuja el diagrama instrucciones–tiempo correspondiente a la ejecución de
@@ -184,7 +184,7 @@ la secuencia de código, insertando los ciclos de parada y aplicando los cortoci
 *Ver diagrama adjunto al final del ejercicio, tras la ejecución*
 
 ⇒ Ahora debe modificarse la función que realiza la detección de riesgos en la etapa de decodificación de las instrucciones (función *detectar_riesgos_datos* en el fichero
-riscv int.c)
+*riscv_int.c*)
 
 ```c
 void detectar_riesgos_datos(void) {
@@ -238,7 +238,7 @@ $ ./resultados/riscv_ej2b -j -d c -c s3 -f codigo/datos2.s
 
 ### 3. Modificación del simulador. *Predict-Not-Taken*
 
-⇒ Para ello, se debe modificar la función que realiza la etapa de búsqueda de las instrucciones (función *fase_busqueda* en el fichero riscv.c).
+⇒ Para ello, se debe modificar la función que realiza la etapa de búsqueda de las instrucciones (función *fase_busqueda* en el fichero _riscv.c_).
 Para probar esta modificación, puede emplearse el código almacenado en el fichero _suma.s_
 
 ```c
@@ -283,6 +283,9 @@ void fase_busqueda() {
               if (EX_MEM.cond) {
                 SaltoEfectivo = SI;
                 PCn = EX_MEM.ALUout;
+                IFnop = SI;
+                IDnop = SI;
+                EXnop = SI;
             } else {
                 PCn = PC + 4;
             }

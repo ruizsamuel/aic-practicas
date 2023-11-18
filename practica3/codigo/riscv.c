@@ -121,6 +121,9 @@ void fase_busqueda() {
               if (EX_MEM.cond) {
                 SaltoEfectivo = SI;
                 PCn = EX_MEM.ALUout;
+                IFnop = SI;
+                IDnop = SI;
+                EXnop = SI;
             } else {
                 PCn = PC + 4;
             }
