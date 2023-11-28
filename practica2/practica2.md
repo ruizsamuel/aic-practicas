@@ -4,6 +4,7 @@ Durante la sesión se pretende conocer el manejo de un simulador de computador s
 ## Ejemplo de programa para RISC V.
 
 El programa almacenado en el archivo _apxpy.s_ realiza la siguiente operación vectorial:
+
 $$  \vec{Z} = a + \vec{X} + \vec{Y} $$  
 
 ### 1. Solución conflictos P (datos) y S3 (control)
