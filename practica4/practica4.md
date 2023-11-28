@@ -124,7 +124,7 @@ El resultado se almacenará en `resultados/ej2.htm`
 * Instrucciones = _247_
 * Ciclos = _504_
 * CPI = _2.04_
-* S = $ {T_{dapy} \over T_{dapyu1}} = {{427 * 1.71 * t} \over {247 * 2.04 * t}} = 1.45 $
+$$ S = {T_{dapy} \over T_{dapyu1}} = {{427 * 1.71 * t} \over {247 * 2.04 * t}} = 1.45 $$
 
 Este código puede modificarse para eliminar todos los riesgos de datos (`codigo/dapyu.s`):
 
@@ -187,7 +187,7 @@ El resultado se almacenará en `resultados/ej3.htm`
 * Instrucciones = _247_
 * Ciclos = _264_
 * CPI = _1.07_
-* S = $ {T_{dapy} \over T_{dapyu}} = {{427 * 1.71 * t} \over {247 * 1.07 * t}} = 2.76 $
+$$ S = {T_{dapy} \over T_{dapyu}} = {{427 * 1.71 * t} \over {247 * 1.07 * t}} = 2.76 $$
 
 ⇒ Analiza este último código y razona por qué el factor de replicación debe ser 4. Por ejemplo, ¿qué pasaría si el factor de replicación fuese 3? ¿Y si fuese 5? Puedes modificar fácilmente el código y comprobar tu respuesta.
 
@@ -256,7 +256,7 @@ El resultado se almacenará en `resultados/ej4.htm`
 * Instrucciones = _420_
 * Ciclos = _485_
 * CPI = _1.15_
-* S = $ {T_{dapy} \over T_{dapyu}} = {{427 * 1.71 * t} \over {420 * 1.15 * t}} =  1.51$
+$$ S =  {T_{dapy} \over T_{dapyu}} = {{427 * 1.71 * t} \over {420 * 1.15 * t}} =  1.51 $$
 
 ⇒ ¿Qué paradas debidas a riesgos de datos encuentras durante la ejecución de una iteración del bucle en el código que utiliza _software pipelining_?
 
@@ -404,4 +404,4 @@ obteniendo las siguientes prestaciones (`resultados/ej6.htm`):
 * Instrucciones = _408_
 * Ciclos = _610_
 * CPI = _1.5_
-* S = $ {T_{daxpy} \over T_{daxpyu1}} = {{608 * 1.4 * t} \over {408 * 1.5 * t}} = 1.4 $
+$$ S = {T_{daxpy} \over T_{daxpyu1}} = {{608 * 1.4 * t} \over {408 * 1.5 * t}} = 1.4 $$
